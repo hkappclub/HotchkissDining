@@ -13,6 +13,7 @@
 		2532F37A1DD29E5D00603C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2532F3781DD29E5D00603C80 /* Main.storyboard */; };
 		2532F37C1DD29E5D00603C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2532F37B1DD29E5D00603C80 /* Assets.xcassets */; };
 		2532F37F1DD29E5D00603C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2532F37D1DD29E5D00603C80 /* LaunchScreen.storyboard */; };
+		3F182B921DEE51040014B66A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F182B911DEE51040014B66A /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2532F37B1DD29E5D00603C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2532F37E1DD29E5D00603C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2532F3801DD29E5D00603C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F182B911DEE51040014B66A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				2532F3741DD29E5D00603C80 /* FirstViewController.swift */,
 				2532F3761DD29E5D00603C80 /* SecondViewController.swift */,
 				2532F3781DD29E5D00603C80 /* Main.storyboard */,
+				3F182B911DEE51040014B66A /* MenuViewController.swift */,
 				2532F37B1DD29E5D00603C80 /* Assets.xcassets */,
 				2532F37D1DD29E5D00603C80 /* LaunchScreen.storyboard */,
 				2532F3801DD29E5D00603C80 /* Info.plist */,
@@ -143,6 +146,7 @@
 				2532F3771DD29E5D00603C80 /* SecondViewController.swift in Sources */,
 				2532F3731DD29E5D00603C80 /* AppDelegate.swift in Sources */,
 				2532F3751DD29E5D00603C80 /* FirstViewController.swift in Sources */,
+				3F182B921DEE51040014B66A /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +310,7 @@
 				2532F3851DD29E5D00603C80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
