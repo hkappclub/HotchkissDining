@@ -8,11 +8,15 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var food1 = "Chicken Parm"
+        var food2 = "Broccoli"
+        var food3 = "Vegan sticks"
+        
     }
 
     override func didReceiveMemoryWarning() {
