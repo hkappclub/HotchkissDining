@@ -10,6 +10,12 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var menuTitle: UILabel!
+    
+    @IBOutlet weak var menuTableView: UITableView!
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
