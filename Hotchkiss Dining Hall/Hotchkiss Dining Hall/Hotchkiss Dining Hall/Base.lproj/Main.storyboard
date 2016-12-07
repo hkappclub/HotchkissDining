@@ -162,17 +162,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Today's Menu" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Today's Menu" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
                                 <rect key="frame" x="77" y="28" width="221" height="41.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3td-oM-asH">
-                                <rect key="frame" x="0.0" y="150.5" width="375" height="467.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-Ni-tFh">
                                 <rect key="frame" x="0.0" y="91.5" width="125" height="50"/>
                                 <constraints>
@@ -181,41 +177,39 @@
                                 </constraints>
                                 <state key="normal" title="Breakfast"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqm-2v-zAf">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqm-2v-zAf">
                                 <rect key="frame" x="125" y="91.5" width="125" height="50"/>
                                 <state key="normal" title="Lunch"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vW-Be-C1X">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vW-Be-C1X">
                                 <rect key="frame" x="250" y="91.5" width="125" height="50"/>
                                 <state key="normal" title="Dinner"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xKC-qK-6OT">
+                                <rect key="frame" x="67" y="327" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3vW-Be-C1X" firstAttribute="leading" secondItem="Uqm-2v-zAf" secondAttribute="trailing" id="151-Wd-j26"/>
-                            <constraint firstItem="3vW-Be-C1X" firstAttribute="trailing" secondItem="3td-oM-asH" secondAttribute="trailing" id="Fi4-kG-lsn"/>
                             <constraint firstItem="Uqm-2v-zAf" firstAttribute="leading" secondItem="b7A-Ni-tFh" secondAttribute="trailing" id="I8m-Zh-Vqi"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="Uqm-2v-zAf" secondAttribute="centerX" id="LZ4-VS-qXo"/>
                             <constraint firstItem="b7A-Ni-tFh" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ND9-aE-LQ6"/>
                             <constraint firstItem="Uqm-2v-zAf" firstAttribute="baseline" secondItem="3vW-Be-C1X" secondAttribute="firstBaseline" id="NQr-4W-t0d"/>
                             <constraint firstItem="b7A-Ni-tFh" firstAttribute="top" secondItem="Uqm-2v-zAf" secondAttribute="top" id="PLk-Vu-bqR"/>
                             <constraint firstItem="b7A-Ni-tFh" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="22" id="RMd-H2-I87"/>
-                            <constraint firstItem="b7A-Ni-tFh" firstAttribute="leading" secondItem="3td-oM-asH" secondAttribute="leading" id="Uah-cD-LAQ"/>
                             <constraint firstAttribute="trailing" secondItem="3vW-Be-C1X" secondAttribute="trailing" id="WBY-0G-shg"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="Wqf-xs-WSQ"/>
-                            <constraint firstItem="Uqm-2v-zAf" firstAttribute="centerX" secondItem="3td-oM-asH" secondAttribute="centerX" id="bbI-eR-IO7"/>
                             <constraint firstItem="Uqm-2v-zAf" firstAttribute="baseline" secondItem="3vW-Be-C1X" secondAttribute="baseline" id="bht-PP-Nex"/>
                             <constraint firstItem="b7A-Ni-tFh" firstAttribute="baseline" secondItem="Uqm-2v-zAf" secondAttribute="firstBaseline" id="e6Y-X2-F5i"/>
                             <constraint firstItem="Uqm-2v-zAf" firstAttribute="top" secondItem="3vW-Be-C1X" secondAttribute="top" id="fUB-pE-BdJ"/>
-                            <constraint firstItem="3td-oM-asH" firstAttribute="top" secondItem="b7A-Ni-tFh" secondAttribute="bottom" constant="9" id="gq7-UF-usf"/>
                             <constraint firstItem="Uqm-2v-zAf" firstAttribute="baseline" secondItem="b7A-Ni-tFh" secondAttribute="firstBaseline" id="qGo-lg-wz7"/>
-                            <constraint firstItem="3td-oM-asH" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="xul-04-fNK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Today's Menu" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="breakfastTableView" destination="3td-oM-asH" id="mSQ-xh-59I"/>
-                        <outlet property="menuTableView" destination="3td-oM-asH" id="ud8-pF-Pkp"/>
                         <outlet property="menuTitle" destination="KQZ-1w-vlD" id="UJm-fm-TkH"/>
                     </connections>
                 </viewController>
@@ -249,20 +243,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4G-Jp-LGF">
-                                <rect key="frame" x="38" y="205" width="299" height="315"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mnp-Z1-xOI">
+                                <rect key="frame" x="67" y="327" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="ldU-fW-1hg">
-                                        <rect key="frame" x="0.0" y="28" width="299" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ldU-fW-1hg" id="DSQ-US-p8X">
-                                            <rect key="frame" x="0.0" y="0.0" width="299" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -272,9 +256,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
-                    <connections>
-                        <outlet property="tableView" destination="b4G-Jp-LGF" id="2lg-D6-Cbn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
