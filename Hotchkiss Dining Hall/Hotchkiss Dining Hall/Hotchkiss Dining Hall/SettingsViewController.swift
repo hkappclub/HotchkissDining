@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class SettingsViewController: UIViewController {
     
@@ -28,11 +29,47 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func breakfastToggled(_ sender: UISwitch) {
-        if breakfastSwitch.isOn{
-            
+        if breakfastSwitch.isOn != true {
+            breakfastNotification()
+            breakfastSwitch.setOn(true, animated: <#T##Bool#>)
+        } else {
+            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["breakfastNotification"])
         }
     }
     
+    func breakfastNotification() {
+        
+        var date = DateComponents()
+        date.hour = 19
+        date.minute = 41
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Notification Test"
+        content.body = "This is just a test. Here is the body."
+        content.sound = UNNotificationSound.default()
+        
+        let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("Uh oh! We had an error: \(error)")
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
+        }
+        
+        return true
+    }
 
     /*
     // MARK: - Navigation
