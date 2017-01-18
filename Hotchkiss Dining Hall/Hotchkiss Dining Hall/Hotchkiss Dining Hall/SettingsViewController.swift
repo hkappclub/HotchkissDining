@@ -51,6 +51,7 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                 break
             case 4:
                 dailyOverviewNotification()
+                break
             default:
                 print("error in button toggled!")
                 break
@@ -73,14 +74,15 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                 print("error in button toggled!")
                 break
             }
+            sender.setOn(false, animated: true)
         }
     }
     
     func breakfastNotification() {
         
         var date = DateComponents()
-        date.hour = 7
-        date.minute = 30
+        date.hour = 19
+        date.minute = 44
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         
