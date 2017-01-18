@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     @IBOutlet weak var breakfastSwitch: UISwitch!
 
@@ -17,8 +17,17 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var dinnerSwitch: UISwitch!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
+        }
+        
 
         // Do any additional setup after loading the view.
     }
@@ -31,7 +40,7 @@ class SettingsViewController: UIViewController {
     @IBAction func breakfastToggled(_ sender: UISwitch) {
         if breakfastSwitch.isOn != true {
             breakfastNotification()
-            breakfastSwitch.setOn(true, animated: <#T##Bool#>)
+            breakfastSwitch.setOn(true, animated: true)
         } else {
             UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["breakfastNotification"])
         }
@@ -41,7 +50,7 @@ class SettingsViewController: UIViewController {
         
         var date = DateComponents()
         date.hour = 19
-        date.minute = 41
+        date.minute = 19
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         
@@ -59,18 +68,12 @@ class SettingsViewController: UIViewController {
             }
         }
     }
-    
+    /*
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
-            if !accepted {
-                print("Notification access denied.")
-            }
-        }
         
         return true
     }
-
+    */
     /*
     // MARK: - Navigation
 
