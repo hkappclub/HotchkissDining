@@ -52,6 +52,13 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
             case 4:
                 dailyOverviewNotification()
                 break
+            case 5:
+                breakfastNotification()
+                lunchNotification()
+                dinnerNotification()
+                breakfastSwitch.setOn(true, animated: true)
+                lunchSwitch.setOn(true, animated: true)
+                dinnerSwitch.setOn(true, animated: true)
             default:
                 print("error in button toggled!")
                 break
@@ -70,6 +77,13 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                 break
             case 4:
                 UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["dailyOverviewNotification"])
+            case 5:
+                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["breakfastNotification"])
+                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["lunchOverviewNotification"])
+                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["dinnerOverviewNotification"])
+                breakfastSwitch.setOn(false, animated: true)
+                lunchSwitch.setOn(false, animated: true)
+                dinnerSwitch.setOn(false, animated: true)
             default:
                 print("error in button toggled!")
                 break
