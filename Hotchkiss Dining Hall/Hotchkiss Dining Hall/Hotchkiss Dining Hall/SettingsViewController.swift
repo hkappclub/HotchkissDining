@@ -60,16 +60,16 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
         } else {
             switch sender.tag {
             case 1:
-            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["breakfastNotification"])
+                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["breakfastNotification"])
                 break
             case 2:
-            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["lunchNotification"])
+                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["lunchNotification"])
                 break
             case 3:
-              UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["dinnerNotification"])
+                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["dinnerNotification"])
                 break
             case 4:
-            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["dailyOverviewNotification"])
+                UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["dailyOverviewNotification"])
             default:
                 print("error in button toggled!")
                 break
@@ -82,7 +82,7 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
         
         var date = DateComponents()
         date.hour = 19
-        date.minute = 44
+        date.minute = 20
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         

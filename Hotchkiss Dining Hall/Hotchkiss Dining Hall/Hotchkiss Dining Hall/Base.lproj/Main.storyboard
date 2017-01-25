@@ -38,14 +38,14 @@
                                 <rect key="frame" x="279" y="197" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="buttonToggled:" destination="1Rg-4k-bh0" eventType="touchUpInside" id="wPI-eN-MAn"/>
+                                    <action selector="buttonToggled:" destination="1Rg-4k-bh0" eventType="valueChanged" id="1Gg-L0-FwE"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="keX-Wv-jeT">
                                 <rect key="frame" x="279" y="296" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="buttonToggled:" destination="1Rg-4k-bh0" eventType="valueChanged" id="nhh-Ac-rk7"/>
+                                    <action selector="buttonToggled:" destination="1Rg-4k-bh0" eventType="valueChanged" id="v89-4i-aY6"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-jL-Ugk">
